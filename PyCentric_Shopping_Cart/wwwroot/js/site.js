@@ -100,5 +100,5 @@ function handleAjaxResponse(data) {
 }
 
 function sortCartItems(sortOrder) {
-    AjaxGetRequest("SortCartItems?sort=", sortOrder);
+    AjaxGetRequest("SortCartItems", { sortOrder: sortOrder });
 } 
