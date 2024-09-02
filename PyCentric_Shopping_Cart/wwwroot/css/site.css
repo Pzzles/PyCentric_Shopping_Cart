@@ -1,0 +1,145 @@
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
+  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+    margin-bottom: 60px;
+    font-family: "Roboto Mono", monospace;
+    font-optical-sizing: auto;
+ //   font-weight: <weight>;
+    font-style: normal;
+
+}
+
+ul.nav.nav-tabs {
+    margin: 10px 0px;
+}
+
+    ul.nav.nav-tabs li:not(.active) a {
+        background-color: #eeeeee;
+        color: grey;
+    }
+
+    ul.nav.nav-tabs li.active a {
+        border-top: 3px solid #16a765;
+    }
+
+
+.loaderbody {
+    width: 100%;
+    height: 100%;
+    left: 0px;
+    top: 0px;
+    position: absolute;
+    background-color: rgba(128,128,128,0.2);
+    z-index: 2147483647;
+}
+
+.card-container {
+    width: 600px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/*.card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #f0f0f0;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 10px;
+}*/
+
+/*.card-avatar {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.card-footer {
+    font-size: 12px;
+    color: #666;
+}*/
+
+.card-container {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    grid-gap: 20px;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: relative; /* Ensure position relative for the button */
+    cursor: default; /* Ensure the card doesn't have a pointer cursor */
+}
+
+.avatar {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background-color: #ccc;
+    margin-bottom: 10px;
+}
+
+.footer {
+    font-size: 16px;
+    text-align: center;
+}
+
+.add-to-cart-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #007bff;
+    font-size: 24px;
+    position: absolute; /* Position the button absolutely within the card */
+    bottom: 10px; /* Align it at the bottom of the card */
+    right: 10px; /* Align it to the right of the card */
+}
+
+.nav-link {
+    display: block;
+    width: 150px;
+    height: 40px;
+    text-align: center;
+    line-height: 40px; /* Centers text vertically */
+    border-radius: 4px; /* Optional: rounded corners */
+    margin-bottom: 5px; /* Optional: spacing between buttons */
+    color: #fff; /* Text color */
+    background-color: #007bff; /* Button background color */
+    text-decoration: none; /* Remove underline */
+}
+
+    .nav-link.active {
+        background-color: #0056b3; /* Background color for active link */
+    }
+
+    .nav-link:hover {
+        background-color: #0056b3; /* Background color on hover */
+    }

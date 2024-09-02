@@ -1,0 +1,51 @@
+﻿@model IEnumerable<PyCentric_Shopping_Cart.Models.Product>
+
+@{
+    ViewData["Title"] = "GetProducts";
+}
+
+
+@* <div class="card-container" style="width: 100%; display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); grid-gap: 20px; padding: 20px;">
+    @if (Model != null)
+    {
+        @foreach (var item in Model)
+        {
+            <div class="card" style="display: flex; flex-direction: column; align-items: center; padding: 20px; border: 1px solid #ccc; border-radius: 15px; background-color: #f9f9f9;">
+                <div class="avatar" style="width: 100px; height: 100px; border-radius: 50%; background-color: #ccc; margin-bottom: 15px;"></div>
+                <div class="footer" style="font-size: 16px; text-align: center;">
+                    <strong>@Html.DisplayFor(modelItem => item.Name)</strong>
+                    <br />
+                    <span style="font-size: 14px; color: #555;">$@Html.DisplayFor(modelItem => item.Price)</span>
+                </div>
+            </div>
+        }
+    }
+</div>
+ *@
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+<div class="card-container">
+    @if (Model != null)
+    {
+        @foreach (var item in Model)
+        {
+            <div class="card" data-id="@item.Id" data-name="@item.Name" data-price="@item.Price" data-quantity="@item.Quantity" data-priority="@item.Priority">
+                <div class="avatar"></div>
+                <div class="footer">
+                    @Html.DisplayFor(modelItem => item.Name)
+                    <br />
+                    @Html.DisplayFor(modelItem => item.Price)
+                    <br />
+                    <!-- Add a clickable icon -->
+                    <button class="add-to-cart-btn" title="Add to cart" data-id="@item.Id">
+                        <i class="fas fa-shopping-cart"></i>
+                    </button>
+                </div>
+            </div>
+        }
+    }
+</div>
+

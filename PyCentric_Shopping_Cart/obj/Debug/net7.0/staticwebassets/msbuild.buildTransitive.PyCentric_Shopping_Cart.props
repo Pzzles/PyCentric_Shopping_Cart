@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\buildMultiTargeting\PyCentric_Shopping_Cart.props" />
+</Project>
